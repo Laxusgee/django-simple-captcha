@@ -152,3 +152,14 @@ Example usage ajax refresh
             $('#id_captcha_0').val(result['key'])
         });
     });
+
+# fetch api::
+    fetch("/captcha/refresh/", {
+       "headers": {
+            "X-Requested-With": "XMLHttpRequest"
+       }
+    })
+    .then((response) => response.json())
+    .then((result) => {
+       // use result to set image_url and key
+    });
